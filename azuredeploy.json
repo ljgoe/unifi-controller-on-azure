@@ -4,6 +4,7 @@
     "parameters": {
         "ContainerName": {
             "type": "String",
+            "defaultValue": "unifi-controller",
             "metadata": {
                 "description": "Name for the container."
             }
