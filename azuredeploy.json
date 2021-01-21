@@ -11,12 +11,14 @@
         },
         "StorageAccountName": {
             "type": "String",
+            "defaultValue": "[uniqueString( utcNow('u') )]",
             "metadata": {
                 "description": "Storage Account Name will be auto generated."
             }
         },
         "location": {
             "type": "String",
+            "defaultValue": "[resourceGroup().location]",
             "metadata": {
                 "description": "Location for all resources."
             }
