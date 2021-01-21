@@ -2,22 +2,22 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "ContainerGroupsName": {
+        "ContainerName": {
             "type": "String",
             "metadata": {
-            "description": "Name for the container and group."
+                "description": "Name for the container."
             }
         },
         "StorageAccountName": {
             "type": "String",
             "metadata": {
-            "description": "Storage Account Name will be auto generated."
+                "description": "Storage Account Name will be auto generated."
             }
         },
         "location": {
             "type": "String",
             "metadata": {
-            "description": "Location for all resources."
+                "description": "Location for all resources."
             }
         }
     },
@@ -28,7 +28,7 @@
         {
             "type": "Microsoft.ContainerInstance/containerGroups",
             "apiVersion": "2018-10-01",
-            "name": "[parameters('ContainerGroupsName')]",
+            "name": "[parameters('ContainerName')]",
             "location": "[parameters('location')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/fileServices', parameters('StorageAccountName'), 'default')]",
@@ -37,7 +37,7 @@
             "properties": {
                 "containers": [
                     {
-                        "name": "[parameters('ContainerGroupsName')]",
+                        "name": "[parameters('ContainerName')]",
                         "properties": {
                             "image": "jacobalberty/unifi:stable",
                             "ports": [
