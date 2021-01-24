@@ -21,7 +21,7 @@
             "type": "object",
             "defaultValue": {
                 "Environment": "Production",
-                "Project": "Unifi"
+                "Project": "UniFi"
             }
         }
     },
@@ -38,14 +38,13 @@
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/fileServices', parameters('StorageAccountName'), 'default')]",
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccountName'))]"
-                // "[resourceId('Microsoft.Storage/storageAccounts/fileServices/shares', concat(parameters('StorageAccountName'), '/default/unifi'))]"
             ],
             "properties": {
                 "containers": [
                     {
                         "name": "[parameters('ContainerGroupsName')]",
                         "properties": {
-                            "image": "jacobalberty/unifi:stable",
+                            "image": "jacobalberty/unifi:6.0.43",
                             "ports": [
                                 {
                                     "protocol": "UDP",
@@ -185,7 +184,7 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccountName'))]"
             ],
             "properties": {
-                "shareQuota": 1
+                "shareQuota": 2
             }
         }
     ]
