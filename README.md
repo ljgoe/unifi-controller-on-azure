@@ -1,4 +1,4 @@
-# unifi on azure 
+# UniFi on Azure 
 as a docker container, because we can
 
 #### Introduction
