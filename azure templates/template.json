@@ -44,7 +44,7 @@
                     {
                         "name": "[parameters('ContainerGroupsName')]",
                         "properties": {
-                            "image": "jacobalberty/unifi:6.0.43",
+                            "image": "jacobalberty/unifi:v6.2.26",
                             "ports": [
                                 {
                                     "protocol": "UDP",
