@@ -39,7 +39,7 @@
                     {
                         "name": "[parameters('ContainerName')]",
                         "properties": {
-                            "image": "jacobalberty/unifi:stable",
+                            "image": "jacobalberty/unifi:latest",
                             "ports": [
                                 {
                                     "protocol": "UDP",
