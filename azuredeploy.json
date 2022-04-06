@@ -27,7 +27,7 @@
     "resources": [
         {
             "type": "Microsoft.ContainerInstance/containerGroups",
-            "apiVersion": "2018-10-01",
+            "apiVersion": "2021-10-01",
             "name": "[parameters('ContainerName')]",
             "location": "[parameters('location')]",
             "dependsOn": [
@@ -119,7 +119,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts",
-            "apiVersion": "2019-06-01",
+            "apiVersion": "2021-08-01",
             "name": "[parameters('StorageAccountName')]",
             "location": "[parameters('location')]",
             "sku": {
