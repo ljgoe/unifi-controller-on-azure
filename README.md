@@ -24,6 +24,12 @@ Browse to the web interface by navigating to https://*x.x.x.x*:8443
 
 And enjoy your new controller.
 
+## Deploy from the Azure Marketplace
+The solution is also available from the Microsoft Azure Marketplace. You can search for UniFi in the Azure portal and deploy the UniFi controller from there.
+![Template](https://raw.githubusercontent.com/Syndicate-Consulting/unifi-on-azure/master/images/uoa%20marketplace.png?raw=true)
+
+If you receive a 404 error after the deployment please be patient. The controller is still setting itself up and needs a few minutes. :-)
+
 ## Deploy to Azure
 If you like to deploy it directly to Azure, please use the link below. This will create the storage account, docker image, an link the two together.
 
