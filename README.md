@@ -15,7 +15,8 @@ Azure provides us with multiple ways to deploy resource. Using [ARM templates](h
 ## Deploy to Azure
 If you like to deploy it directly to Azure, please use the link below. This will create the storage account, docker image, an link the two together.
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/ljgoe/unifi-controller-on-azure/master/azuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fljgoe%2Funifi-controller-on-azure%2Fmaster%2Fazuredeploy.json)
+
 
 #### Thing you need to do yourself
 The deployment takes care of almost everything. There are still two things that need to be done by hand.
