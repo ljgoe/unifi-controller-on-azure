@@ -4,13 +4,19 @@ As a docker container
 #### Introduction
 This is a ready to deploy Unifi controller for Azure. This will install 
 
-#### Using the [Jacob Alberty](https://github.com/jacobalberty/unifi-docker) docker build on Azure. 
+#### Using docker build on Azure. 
+#### [Jacob Alberty](https://github.com/jacobalberty/unifi-docker)
 #### [Docker image](https://hub.docker.com/r/jacobalberty/unifi)
 Almost no configuration is needed.
 The Unifi controllers run's as a Container Instance in Azure and uses a Azure file share to store it's configuration data.
 
 ## Deployment
 Azure provides us with multiple ways to deploy resource. Using [ARM templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/) works best for the resources we need.
+
+## Deploy to Azure
+If you like to deploy it directly to Azure, please use the link below. This will create the storage account, docker image, an link the two together.
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/ljgoe/unifi-controller-on-azure/master/azuredeploy.json)
 
 #### Thing you need to do yourself
 The deployment takes care of almost everything. There are still two things that need to be done by hand.
@@ -30,16 +36,6 @@ And enjoy your new controller.
 
 If you receive a 404 error after the deployment please be patient. The controller is still setting itself up and needs a few minutes. :-)
 
-## Deploy to Azure
-If you like to deploy it directly to Azure, please use the link below. This will create the storage account, docker image, an link the two together.
-
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https://github.com/ljgoe/unifi-controller-on-azure/blob/5b74767f4e7561fbf0f3dba523725b57db4ec773/azuredeploy.json)
-
-
-## Suggestions
-If you have any comments of suggestions please feel free to [add them](https://github.com/Syndicate-Consulting/unifi-on-azure/issues).
-
-Please keep in mind that Azure Container Instances are not available in all regions. You need to deploy the controller to a supported region.
 
 ## External Links
 [Jacob Alberty's Docker image for the Unifi Controller.](https://github.com/jacobalberty/unifi-docker)
