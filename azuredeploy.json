@@ -102,7 +102,7 @@
                             "port": 8880
                         }
                     ],
-                    "type": "Public",
+                    "type": "Public"
                 },
                 "osType": "Linux",
                 "volumes": [
