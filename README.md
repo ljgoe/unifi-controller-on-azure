@@ -9,16 +9,13 @@ This is a ready to deploy Unifi controller for Azure. This will install unify us
 
 The Unifi controllers run's as a Container Instance in Azure and uses a Azure file share to store it's configuration data.
 
-## Deployment
-Azure provides us with multiple ways to deploy resource. Using [ARM templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/) works best for the resources we need.
-
 ## Deploy to Azure
 If you like to deploy it directly to Azure, please use the link below. This will create the storage account, docker image, an link the two together.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fljgoe%2Funifi-controller-on-azure%2Fmaster%2Fazuredeploy.json)
 
 
-#### Thing you need to do yourself
+#### Thing you need to do
 The deployment takes care of almost everything. There are still two things that need to be done by hand.
 1. Add your own certificates to the file share in /unifi/cert.
 2. Configure the controller itself. Either by restoring from an existing back-up. Or by following the wizard. That's up to you.
