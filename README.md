@@ -28,21 +28,13 @@ Browse to the web interface by navigating to https://*x.x.x.x*:8443
 
 And enjoy your new controller.
 
-## Deploy from the Azure Marketplace
-The solution is also available from the [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/syndicateconsulting1592598527633.offer2?tab=Overview). You can search for UniFi in the Azure portal and deploy the UniFi controller from there.
-![Template](https://raw.githubusercontent.com/Syndicate-Consulting/unifi-on-azure/master/images/uoa%20marketplace.png?raw=true)
-
 If you receive a 404 error after the deployment please be patient. The controller is still setting itself up and needs a few minutes. :-)
 
 ## Deploy to Azure
 If you like to deploy it directly to Azure, please use the link below. This will create the storage account, docker image, an link the two together.
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FSyndicate-Consulting%2Funifi-on-azure%2Fmaster%2Fazuredeploy.json) [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FSyndicate-Consulting%2Funifi-on-azure%2Fmaster%2Fazuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https://github.com/ljgoe/unifi-controller-on-azure/blob/5b74767f4e7561fbf0f3dba523725b57db4ec773/azuredeploy.json)
 
-#### I’m lazy, can you make it easier for me
-Sure, if you want to put a minimum amount of effort into this grab the *template.json* file from the [azure templates directory](https://github.com/Syndicate-Consulting/unifi-on-azure/tree/master/azure%20templates) and copy-paste the content into a new template file in Azure. Save it, and click deploy.
-
-![Template](https://raw.githubusercontent.com/Syndicate-Consulting/unifi-on-azure/master/images/azure%20template.jpg?raw=true)
 
 ## Suggestions
 If you have any comments of suggestions please feel free to [add them](https://github.com/Syndicate-Consulting/unifi-on-azure/issues).
