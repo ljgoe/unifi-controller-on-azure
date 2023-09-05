@@ -8,16 +8,16 @@
             "description": "Name for the container instance and group."
             }
         },
-        "dnsNameLabel": {
-            "type": "String",
-            "metadata": {
-            "description": "DNS name for your container instance - will result in dnsnamelabel.location.azurecontainer.io"
-            }
-        },
         "StorageAccountName": {
             "type": "String",
             "metadata": {
             "description": "Storage Account Name will be auto generated."
+            }
+        },
+        "location": {
+            "type": "String",
+            "metadata": {
+                "description": "Location for all resources."
             }
         }
     },
