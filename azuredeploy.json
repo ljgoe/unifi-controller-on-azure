@@ -13,12 +13,6 @@
             "metadata": {
             "description": "Storage Account Name will be auto generated."
             }
-        },
-        "location": {
-            "type": "String",
-            "metadata": {
-                "description": "Location for all resources."
-            }
         }
     },
     "variables": {
@@ -28,8 +22,8 @@
         {
             "type": "Microsoft.ContainerInstance/containerGroups",
             "apiVersion": "2021-10-01",
-            "name": "[parameters('ContainerName')]",
-            "location": "[parameters('location')]",
+            "name": "[parameters('ContainerGroupsName')]",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/fileServices', parameters('StorageAccountName'), 'default')]",
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccountName'))]"
@@ -37,7 +31,7 @@
             "properties": {
                 "containers": [
                     {
-                        "name": "[parameters('ContainerName')]",
+                        "name": "[parameters('ContainerGroupsName')]",
                         "properties": {
                             "image": "jacobalberty/unifi:latest",
                             "ports": [
@@ -121,7 +115,7 @@
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2021-08-01",
             "name": "[parameters('StorageAccountName')]",
-            "location": "[parameters('location')]",
+            "location": "[resourceGroup().location]",
             "sku": {
                 "name": "Standard_LRS",
                 "tier": "Standard"
