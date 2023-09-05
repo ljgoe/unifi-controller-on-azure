@@ -4,7 +4,7 @@ This is a ready to deploy Unifi controller for Azure. This will install unify us
 
 #### Using docker build on Azure from the following source: 
 1. [Jacob Alberty](https://github.com/jacobalberty/unifi-docker)
-2. Docker image](https://hub.docker.com/r/jacobalberty/unifi)
+2. [Docker image](https://hub.docker.com/r/jacobalberty/unifi)
 
 
 The Unifi controllers run's as a Container Instance in Azure and uses a Azure file share to store it's configuration data.
