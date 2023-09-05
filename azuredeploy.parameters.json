@@ -5,11 +5,14 @@
     "ContainerName": {
       "value": "unifi-controller"
     },
+    "dnsNameLabel": {
+      "value": "saltcontroller"
+    },
     "StorageAccountName": {
       "value": "[uniqueString( utcNow('u') )]"
     },
     "location": {
       "value": "[resourceGroup().location]"
-    },
+    }
   }
 }

@@ -1,23 +1,23 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "ContainerName": {
+        "ContainerGroupsName": {
             "type": "String",
             "metadata": {
-                "description": "Name for the container."
+            "description": "Name for the container instance and group."
+            }
+        },
+        "dnsNameLabel": {
+            "type": "String",
+            "metadata": {
+            "description": "DNS name for your container instance - will result in dnsnamelabel.location.azurecontainer.io"
             }
         },
         "StorageAccountName": {
             "type": "String",
             "metadata": {
-                "description": "Storage Account Name will be auto generated."
-            }
-        },
-        "location": {
-            "type": "String",
-            "metadata": {
-                "description": "Location for all resources."
+            "description": "Storage Account Name will be auto generated."
             }
         }
     },
@@ -65,7 +65,7 @@
                             "environmentVariables": [],
                             "resources": {
                                 "requests": {
-                                    "memoryInGB": 2,
+                                    "memoryInGB": 1.5,
                                     "cpu": 1
                                 }
                             },
@@ -102,7 +102,8 @@
                             "port": 8880
                         }
                     ],
-                    "type": "Public"
+                    "type": "Public",
+                    "dnsNameLabel": "[parameters('dnsNameLabel')]"
                 },
                 "osType": "Linux",
                 "volumes": [
